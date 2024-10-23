@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar responsive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="logo"><a href="#">treinando web</a></div>
+        <ul class="links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="action_btn">Comece</button>
+        <div class="toggle_btn">
+            <i class='fas fa-bars'></i>   
+        </div>
+    </div>
+    <div class="dropdown_menu">
+        <ul class="links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="action_btn">Comece</button>
+    </div>
+</header>
+<main>
+    <section id="hero">
+        <h1>Welcome</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit. Sequi amet atque minima ullam omnis aut rem id maxime blanditiis? Earum dolor voluptatum, sint temporibus pariatur ex ipsam quaerat voluptates dolorum.
+        </p>
+    </section>
+</main>
+
+<script>
+  const toggleBtn = document.querySelector('.toggle_btn');
+  const toggleBtnIcon = document.querySelector('.toggle_btn i');
+  const dropDownMenu = document.querySelector('.dropdown_menu');
+
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open');
+    const isOpen = dropDownMenu.classList.contains('open');
+    
+    toggleBtnIcon.classList = isOpen ? 'fas fa-times' : 'fas fa-bars';
+  };
+</script>  
+</body>
+</html>
